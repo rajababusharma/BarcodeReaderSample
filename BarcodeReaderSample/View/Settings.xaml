@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarcodeReaderSample.View.Settings"
+             Title="Settings">
+    <VerticalStackLayout>
+       
+        <StackLayout Margin="10,5,10,0" RadioButtonGroup.GroupName="fileFormat"
+                     RadioButtonGroup.SelectedValue="{Binding Selection}">
+            <Label Text="Please select the output file format:" />
+            <RadioButton Content="PDF"
+                         Value=".pdf" />
+            <RadioButton Content="CSV"
+                         Value=".csv" />
+            <RadioButton Content="Text"
+                         Value=".txt" />
+
+            <Label x:Name="lblformat">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="You have chosen: " />
+                        <Span Text="{Binding Selection}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        <Border Margin="0,10,0,0"></Border>
+
+        <HorizontalStackLayout Margin="10,5,10,0">
+            <CheckBox IsChecked="{Binding IsChecked}"></CheckBox>
+            <Label Text=" Enable for duplicate scanning check: " VerticalTextAlignment="Center" />
+          
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

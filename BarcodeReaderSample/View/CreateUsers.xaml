@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarcodeReaderSample.Views.CreateUsers"
+             Title="Create Users">
+    <ScrollView Orientation="Vertical">
+        <StackLayout BackgroundColor="White">
+            <!-- Place new controls here -->
+
+            <Image x:Name="imgmain" Source="icon.png"
+                   Margin="0,20,0,0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"></Image>
+
+
+           
+            <Label Text="Manage stocks on your finger tips!" Opacity="1" FontSize="20" TextColor="{x:DynamicResource PrimaryVariantColor}"
+               FontAttributes="Italic" HorizontalTextAlignment="Center"></Label>
+
+
+
+            <StackLayout Orientation="Vertical">
+                <Grid VerticalOptions="FillAndExpand"
+              ColumnSpacing="2" Margin="10,20,10,0"
+             >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="User Name:" Margin="10,0,0,0"
+                       HorizontalTextAlignment="Start"
+                       Style="{DynamicResource SmallLabelFont}"
+                   Grid.Row="0"
+                   Grid.Column="0"></Label>
+                    <Entry x:Name="username"
+                   Placeholder="user name"
+                   Grid.Row="0"
+                   Grid.Column="1">
+
+                    </Entry>
+                    <Label Text="Password:"
+                       Margin="10,0,0,0"
+                       HorizontalTextAlignment="Start"
+                   Style="{DynamicResource SmallLabelFont}"       
+                   Grid.Row="1"
+                   Grid.Column="0"></Label>
+
+                    <Entry x:Name="password"
+                                       IsPassword="True"
+                               Placeholder="password"
+                               Grid.Row="1"
+                               Grid.Column="1"></Entry>
+
+                    <Label Text="Confirm Password:"
+    Margin="10,0,0,0"
+    HorizontalTextAlignment="Start"
+Style="{DynamicResource SmallLabelFont}"       
+Grid.Row="2"
+Grid.Column="0"></Label>
+
+                    <Entry x:Name="confirmpassword"
+                    IsPassword="True"
+            Placeholder="confirmpassword"
+            Grid.Row="2"
+            Grid.Column="1"></Entry>
+
+                    <Grid Grid.Row="5"
+                      Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                       
+                        <Button x:Name="btnregister" Clicked="Button_Clicked"
+                            Grid.Column="1"
+                            Text="Save"
+                            BorderWidth="2"
+                            HorizontalOptions="FillAndExpand"
+                            CornerRadius="10"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            BackgroundColor="{x:DynamicResource PrimaryColor}"
+                            BorderColor="{x:DynamicResource PrimaryVariantColor}"
+                            TextColor="White"></Button>
+                    </Grid>
+
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
