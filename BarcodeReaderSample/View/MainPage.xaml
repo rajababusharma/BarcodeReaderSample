@@ -7,10 +7,10 @@
         <StackLayout BackgroundColor="LightGray">
             <!-- Place new controls here -->
 
-            <Image x:Name="imgmain" Source="icon.png"
+            <!--<Image x:Name="imgmain" Source="logo.png" Background="Transparent"
                        Margin="0,20,0,0"
                        VerticalOptions="Start"
-                       HorizontalOptions="CenterAndExpand"></Image>
+                       HorizontalOptions="CenterAndExpand"></Image>-->
 
             <Label Text="Manage stocks on your finger tips!"
                    Style="{DynamicResource HeaderLabelFont}"

@@ -66,7 +66,7 @@ namespace BarcodeReaderSample.View
         private async void UpdateBarcodeInfo(string data, string symbology, DateTime timestamp)
         {
             entrysku.Text = data;
-          //  await ValidateDocket();
+            await ValidateDocket();
         }
 
         private async Task ValidateDocket()
@@ -344,7 +344,7 @@ namespace BarcodeReaderSample.View
        
         public async void OnScanButtonClicked(object sender, EventArgs args)
         {
-             await ValidateDocket();
+            // await ValidateDocket();
             if (mSelectedReader != null && mSelectedReader.IsReaderOpened)
             {
                 if (mContinuousScan)

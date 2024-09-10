@@ -4,7 +4,7 @@
              x:Class="BarcodeReaderSample.Views.CreateUsers"
              Title="Create Users">
     <ScrollView Orientation="Vertical">
-        <StackLayout BackgroundColor="White">
+        <StackLayout BackgroundColor="LightGray">
             <!-- Place new controls here -->
 
             <Image x:Name="imgmain" Source="icon.png"

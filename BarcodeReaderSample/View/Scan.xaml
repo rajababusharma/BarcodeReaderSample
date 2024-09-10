@@ -14,7 +14,7 @@
                     
                      Command="{Binding OpenSettings}"></ToolbarItem>
     </ContentPage.ToolbarItems>
-    <StackLayout>
+    <StackLayout BackgroundColor="LightGray">
 
 
 
