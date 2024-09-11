@@ -4,7 +4,7 @@
              x:Class="BarcodeReaderSample.MainPage" Title="Stock Taking">
 
     <ScrollView Orientation="Vertical">
-        <StackLayout BackgroundColor="LightGray">
+        <StackLayout BackgroundColor="White">
             <!-- Place new controls here -->
 
             <!--<Image x:Name="imgmain" Source="logo.png" Background="Transparent"
@@ -16,13 +16,13 @@
                    Style="{DynamicResource HeaderLabelFont}"
                    Opacity="1"
                    FontSize="32"
-                   TextColor="{x:DynamicResource PrimaryVariantColor}"
+                   TextColor="DarkRed"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"></Label>
 
             <StackLayout Orientation="Vertical">
                 <Frame Margin="5,10,5,0"
-                       BorderColor="DarkGray"
+                       BorderColor="DarkRed"
                        CornerRadius="10">
                     
       
@@ -41,19 +41,25 @@
                         <ColumnDefinition Width="4*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Label Text="User Name:" VerticalTextAlignment="Center"
-                           HorizontalTextAlignment="Start"
+                        <Label Text="User Name:"
+                               VerticalTextAlignment="Center"
+                               TextColor="Black"
+                               FontSize="16"
+                               HorizontalTextAlignment="Start"
                                Style="{DynamicResource MediumLabelFont}"
-                       Grid.Row="0"
+                       Grid.Row="0" TextDecorations="Underline"
                        Grid.Column="0"></Label>
                         <Entry x:Name="user" Margin="5,0,0,0"
-                               Text="{Binding USERNAME}"
+                               Text="{Binding USERNAME}" 
                        Placeholder="user name"
                        Grid.Row="0"
                        Grid.Column="1">
                        
                     </Entry>
                         <Label Text="Password:"
+                               TextDecorations="Underline"
+                               FontSize="16"
+                               TextColor="Black"
                                VerticalTextAlignment="Center"
                                HorizontalTextAlignment="Start"
                                Style="{DynamicResource MediumLabelFont}"       
@@ -115,6 +121,33 @@
                        Margin="0,5,0,0"
                    TextColor="Black"
                    HorizontalOptions="CenterAndExpand"></Label>
+
+                <Label 
+                       Opacity="1"
+                       FontSize="16"
+                       Text="Designed and Developed by A' Niche Infotech Solutions Pvt.Ltd."
+                       Margin="0,5,0,0"
+                       TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"></Label>
+              
+                <Label HorizontalOptions="CenterAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenUrlCommand}"
+                                              CommandParameter="https://www.aniche-solutions.com/" />
+                    </Label.GestureRecognizers>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="For more info click here, " />
+                            <Span Text="www.aniche-solutions.com"
+                                  TextColor="Blue"
+                                  TextDecorations="Underline">
+                            </Span>
+                            <Span Text="." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Image Margin="0,20,0,0" Source="anichelogo.png" Background="Transparent"></Image>
 
             </StackLayout>
 

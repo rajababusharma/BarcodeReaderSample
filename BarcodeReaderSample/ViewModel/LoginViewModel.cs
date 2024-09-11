@@ -2,6 +2,7 @@
 using BarcodeReaderSample.Models;
 using BarcodeReaderSample.View;
 using BarcodeReaderSample.Views;
+using Java.Net;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,6 +16,8 @@ namespace BarcodeReaderSample.ViewModels
         DatabaseController database;
         public Command LOGIN { get; set; }
         public Command CreateUsers { get; set; }
+
+        public Command OpenUrlCommand { get; set; }
 
         public string AppVersion { get; set; }
 
@@ -33,6 +36,11 @@ namespace BarcodeReaderSample.ViewModels
             {
                 await App.Current.MainPage.Navigation.PushAsync(new CreateUsers());
             });
+            OpenUrlCommand = new Command<string>(async(url) =>
+            {
+                await Browser.OpenAsync(url);
+            });
+
         }
 
         private string _username;

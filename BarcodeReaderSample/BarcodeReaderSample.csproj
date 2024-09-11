@@ -76,6 +76,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\verdana_regular.ttf" />
+	  <None Remove="Resources\Images\anichelogo.png" />
 	  <None Remove="Resources\Images\settings.png" />
 	</ItemGroup>
 
